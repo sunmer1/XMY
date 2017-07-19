@@ -11,7 +11,7 @@ public class Node {
 
 public void display()
  {
-	 System.out.print(data + " ");
+	System.out.print(data + " ");
  }
  
 }

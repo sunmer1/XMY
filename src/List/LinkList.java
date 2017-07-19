@@ -140,7 +140,7 @@ public class LinkList {
 		list.add(2,2);
 		list.add(2,3);
 		list.add(3,4);
-//		list.add(5,13);
+		list.add(5,13);
 //		list.deleteFirstNode();
 //		list.delete(8);
 //		list.deleteByData(3);
