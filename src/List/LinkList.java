@@ -73,7 +73,7 @@ public class LinkList {
 	{
 		Node current=first;
 		Node previous=first;
-		if(index>len)
+		if(index>=len)
 		{
 			System.out.println("删除失败，该节点位置不存在链表中，超出链表");
 			return null;
@@ -136,13 +136,13 @@ public class LinkList {
 		LinkList list=new LinkList();
 		list.displayALL();
 		list.addFirstNode(1);
-		list.addFirstNode(10);
-		list.add(2,2);
-		list.add(2,3);
-		list.add(3,4);
-		list.add(5,13);
+//		list.addFirstNode(10);
+//		list.add(2,2);
+//		list.add(2,3);
+//		list.add(3,4);
+//		list.add(5,13);
 //		list.deleteFirstNode();
-//		list.delete(8);
+		list.delete(1);
 //		list.deleteByData(3);
 		list.displayALL();
 	}

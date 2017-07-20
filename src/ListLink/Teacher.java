@@ -17,6 +17,21 @@ public class Teacher {
 		this.tel=tel;
 		this.email=email;
 	}
+	public Teacher()
+	{
+		
+	}
+	
+	public Teacher(Teacher teacher)
+	{
+		this.sno=teacher.sno;
+		this.sname=teacher.sname;
+		this.sex=teacher.sex;
+		this.age=teacher.age;
+		this.tel=teacher.tel;
+		this.email=teacher.email;
+	}
+	
 	public String getSno() {
 		return sno;
 	}
