@@ -93,9 +93,10 @@ public class CircleLinkList {
 	 */
 	public void deleteNode(int index)
 	{
+		int temp=index%len;
 		Node previous=first;
 		Node current=first;
-		while(tmp!=index)
+		while(tmp!=temp)
 		{
 			previous=current;
 			current=current.next;
@@ -122,19 +123,24 @@ public class CircleLinkList {
 	//查询满足某条件的信息并打印出来
 	public void getNodeData(Teacher teacher)
 	{
+		int temp=0;
 		Node node=first;
-		for(int i=0;i<len;i++)
+		for(int i=0;i<len-1;i++)
 		{
 			node=node.next;
 			if(node.teacher.getSno()==teacher.getSno())
 			{
 				System.out.println("查询的教工信息是：");
 		        node.display();
-		        System.out.println("查询结束");  
+		        temp++;
+		        System.out.println("查询结束1");  
 			}
 		}
-		System.out.println("未查询到教工信息"); 
-		System.out.println("查询结束");
+		if(temp==0)
+		{
+			System.out.println("未查询到教工信息");
+	        System.out.println("查询结束"); 
+		}		
 	}
 	//将所有的数据打印出来
 	public void PrintAll()
@@ -162,10 +168,10 @@ public class CircleLinkList {
 		cll.addNode(2,teacher4); 
 //		cll.deleteNodeEnd();
 //		cll.deleteNodeFirst();
-//		cll.deleteNode(6);
-		cll.getNodeIndex(2);
+		cll.deleteNode(6);
+//		cll.getNodeIndex(2);
         cll.PrintAll();
-        Teacher teacher5=new Teacher("002","小红","男",22,"1222","wewew");
-		cll.getNodeData(teacher5);
+//        Teacher teacher5=new Teacher("001","小红","男",22,"1222","wewew");
+//		cll.getNodeData(teacher5);
 	}
 }
