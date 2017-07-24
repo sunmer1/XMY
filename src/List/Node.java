@@ -2,9 +2,9 @@ package List;
 
 public class Node {
  protected Node next;
- protected int data;
+ public String data;
  
- public Node(int data)
+ public Node(String data)
  {
 	 this.data=data;
  }

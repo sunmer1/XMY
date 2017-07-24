@@ -13,7 +13,7 @@ public class LinkList {
 	}
 	
 	//插入一个头结点
-	public void addFirstNode(int data)
+	public void addFirstNode(String data)
 	{
 		Node node=new Node(data);
 		node.next=first;   //新建的节点的指针域点指向原头结点
@@ -37,7 +37,7 @@ public class LinkList {
 	}
 	
 	//在任意位置插入节点，该位置由传参index决定,新增节点为index位置
-	public void add(int index,int data)
+	public void add(int index,String data)
 	{
 		Node node=new Node(data);
 		Node previous=first;
@@ -94,11 +94,11 @@ public class LinkList {
 	}
 	
 	//根据data删除该节点,并返回该节点
-	public Node deleteByData(int data)
+	public Node deleteByData(String data)
 	{
 		Node current=first;
 		Node previous=first;
-		while(current.data!=data)
+		while(current.data!=(data))
 		{
 			if(current.next==null)
 			{
@@ -131,20 +131,20 @@ public class LinkList {
 		
 	}
 	
-	public static void main(String[] args)
-	{
-		LinkList list=new LinkList();
-		list.displayALL();
-		list.addFirstNode(1);
+//	public static void main(String[] args)
+//	{
+//		LinkList list=new LinkList();
+//		list.displayALL();
+//		list.addFirstNode(1);
 //		list.addFirstNode(10);
 //		list.add(2,2);
 //		list.add(2,3);
 //		list.add(3,4);
 //		list.add(5,13);
 //		list.deleteFirstNode();
-		list.delete(1);
-//		list.deleteByData(3);
-		list.displayALL();
-	}
+//		list.delete(1);
+////		list.deleteByData(3);
+//		list.displayALL();
+//	}
 
 }
